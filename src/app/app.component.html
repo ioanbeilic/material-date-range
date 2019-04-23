@@ -1,1 +1,14 @@
-<lib-date-range-picker></lib-date-range-picker>
+<mat-form-field>
+  <input
+    style="text-align: center"
+    matInput
+    placeholder="Choose a date"
+    [matDatepicker]="resultPicker"
+  />
+  <sg-datepicker #resultPicker touchUi="true"></sg-datepicker>
+  <span matSuffix>-</span>
+</mat-form-field>
+<mat-form-field>
+  <input style="text-align: center" matInput [sgDatepicker]="resultPicker" />
+  <mat-datepicker-toggle matSuffix [for]="resultPicker"></mat-datepicker-toggle>
+</mat-form-field>
