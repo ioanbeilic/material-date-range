@@ -4,11 +4,21 @@
     matInput
     placeholder="Choose a date"
     [matDatepicker]="resultPicker"
+    [(value)]="from"
   />
   <sg-datepicker #resultPicker touchUi="true"></sg-datepicker>
   <span matSuffix>-</span>
 </mat-form-field>
 <mat-form-field>
-  <input style="text-align: center" matInput [sgDatepicker]="resultPicker" />
-  <mat-datepicker-toggle matSuffix [for]="resultPicker"></mat-datepicker-toggle>
+  <input
+    style="text-align: center"
+    matInput
+    [(value)]="to"
+    [sgDatepicker]="resultPicker"
+  />
+  <mat-datepicker-toggle
+    (click)="test($event)"
+    matSuffix
+    [for]="resultPicker"
+  ></mat-datepicker-toggle>
 </mat-form-field>
